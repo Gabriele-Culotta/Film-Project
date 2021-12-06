@@ -1,0 +1,56 @@
+/* CSS BACKGROUND */
+.films {
+
+ background-color: #202020
+}
+.navbar {
+  background-color: #202020
+}
+
+.navbar input {
+  cursor: pointer;
+}
+
+.navbar-brand{
+  color: whitesmoke;
+  text-shadow: darkorange 3px 4px 7px;
+  font-family: cursive;
+}
+
+/* LOADING SPINNER */
+
+.spinner {
+  border: 16px solid silver;
+  border-top: 16px solid #337AB7;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 700ms linear infinite;
+  top:50%;
+  left:50%;
+  position: absolute;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(-360deg) }
+}
+
+/* CSS LOCANDINE */
+.card{
+   background-color: black;
+   cursor: pointer;
+}
+
+/* ANIMAZIONE BOX */
+.card :hover{
+box-shadow:  darkorange 5px 5px 11px;
+transform: translateY(-3px);
+transition-duration: 0.5s;
+}
+
+.pop-up{
+ background-color: #202020;
+}
+
+
+

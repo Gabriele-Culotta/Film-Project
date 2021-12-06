@@ -1,0 +1,192 @@
+.navbar {
+  background-color: #202020
+}
+.navbar-brand{
+  color: whitesmoke;
+  text-shadow: darkorange 3px 4px 7px;
+  font-family: cursive;
+}
+.details-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+}
+.details ::ng-deep mwl-gauge {
+  width: 150px;
+  height: 150px;
+  display: block;
+  padding: 10px;
+}
+.details ::ng-deep mwl-gauge .dial {
+  stroke-width: 10;
+}
+.details ::ng-deep mwl-gauge .value {
+  stroke-dasharray: none;
+  stroke-width: 13;
+}
+.details ::ng-deep mwl-gauge .value-text {
+  fill: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}
+.details .film-gauge {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.details .film-gauge-label {
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  bottom: 60px;
+}
+.film-banner {
+  height: 442px;
+  overflow: hidden;
+}
+.film-banner-img {
+  width: 100%;
+  filter: blur(1px);
+}
+.film-content {
+  text-align: center;
+  position: relative;
+  top: -200px;
+}
+.film-header-title {
+  /* font-size: 70px; */
+  font-size: xx-large;
+  color: #fff;
+  font-weight: 700;
+  line-height: 70px;
+  white-space: nowrap;
+  text-align: center
+}
+.film-header-release {
+  color: #fff;
+  font-weight: 700;
+}
+.film-header-genres {
+  color: #fff;
+  font-weight: 700;
+}
+
+.details-wrapper {
+	 max-width: 900px;
+	 margin: 20px auto;
+	 position: relative;
+}
+ .details ::ng-deep mwl-gauge {
+	 width: 150px;
+	 height: 150px;
+	 display: block;
+	 padding: 10px;
+}
+ .details ::ng-deep mwl-gauge .dial {
+	 stroke-width: 10;
+}
+ .details ::ng-deep mwl-gauge .value {
+	 stroke-dasharray: none;
+	 stroke-width: 13;
+}
+ .details ::ng-deep mwl-gauge .value-text {
+	 fill: #fff;
+	 font-weight: 700;
+	 font-size: 24px;
+}
+ .details .game-gauge {
+	 position: absolute;
+	 top: 50px;
+	 right: 0;
+}
+ .details .game-gauge-label {
+	 font-size: 20px;
+	 color: #fff;
+	 position: relative;
+	 bottom: 60px;
+}
+ .game-banner {
+	 height: 442px;
+	 overflow: hidden;
+}
+ .game-banner-img {
+	 width: 100%;
+	 filter: blur(5px);
+}
+ .game-content {
+	 text-align: center;
+	 position: relative;
+	 top: -200px;
+}
+ .game-header-title {
+	 font-size: 70px;
+	 color: #fff;
+	 font-weight: 700;
+	 line-height: 70px;
+	 white-space: nowrap;
+}
+ .game-header-release-date {
+	 color: #fff;
+	 font-weight: 700;
+}
+ .game-header-genres {
+	 color: #fff;
+	 font-weight: 700;
+}
+
+
+/* SCHEDA FILM */
+
+div.details{
+  background-color: #202020;
+}
+
+.game-tabs {
+  background: #202020;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  margin-top: 21px;
+}
+.game-tabs-par {
+  padding: 20px 20px 0 20px;
+  margin-bottom: 0;
+}
+.game-tabs-link {
+  color: #fff;
+}
+.game-tabs-votes {
+  margin-left: 20px;
+  display: flex;
+}
+.game-tabs-votes-count {
+  margin-left: 5px;
+}
+.game-tabs ::ng-deep .mat-tab-labels {
+  justify-content: center;
+}
+.game-votes-up {
+  color: #5ee432;
+}
+.game-votes-down {
+  color: #ef4655;
+}
+.game-votes-count {
+  margin-left: 5px;
+  margin-right: 10px;
+  vertical-align: super;
+}
+.game-description {
+  padding: 20px;
+}
+.game-screenshot {
+  margin-top: 5px;
+  width: calc(50% - 10px);
+}
+.game-screenshot:nth-child(even) {
+  margin-left: 10px;
+}
+.game-trailer {
+  width: 100%;
+  margin: 20px 0;
+}

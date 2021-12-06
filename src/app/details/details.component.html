@@ -1,0 +1,106 @@
+<section class="navbar-top">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nextre Cinema</a>
+    </div>
+  </nav>
+  <!-- <div class="films">
+    <!-- NGIF PERCHè NON è DENTRO UN ARRAY
+    <section *ngIf="detail" class="container">
+      <h4> url: {{detail.homepage}} </h4>
+      <img
+      src="https://image.tmdb.org/t/p/original/{{ detail.backdrop_path}}"
+      class="card-img-top"
+    />
+    <!-- NGFOR PERCHè è DENTRO UN ARRAY
+       <div *ngFor="let det of detail.genres">
+      <h4>  {{det.name}} </h4>
+    </div>
+</section> -->
+
+<div class="details">
+    <div class="film-banner" *ngIf="detail">
+      <img
+      src="https://image.tmdb.org/t/p/original/{{ detail.backdrop_path}}"
+      class="film-banner-img"
+      alt="background image"
+    />
+    </div>
+    <div class="film-content">
+      <div class="details-wrapper" *ngIf="detail">
+        <div class="film-header">
+          <h1 class="film-header-title"> {{detail.original_title}} </h1>
+          <h2 class="film-header-release"> {{detail.release_date | date}}</h2>
+          <h2 class="film-header-genres">
+            <span> {{detail.tagline}} </span>
+          </h2>
+
+          <!-- VALUTAZIONE FILM -->
+          <div class="film-gauge">
+            <mwl-gauge
+            class="two"
+            [max]="10"
+            [dialStartAngle]="180"
+            [dialEndAngle]="0"
+            [value]="filmRating"
+            [animated]="true"
+            [color]="getColor"
+            [animationDuration]="2"
+            >
+            </mwl-gauge>
+
+          </div>
+        </div>
+
+        <!--SCHEDA FILM -->
+       <div class="game-tabs">
+  <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
+    <mat-tab label="About">
+      <p *ngIf="detail.genres?.length" class="game-tabs-par">
+        Genres:
+        <span *ngFor="let det of detail.genres ; let last = last"
+          >{{ det.name }}<span *ngIf="!last">, </span></span
+        >
+      </p>
+       <p *ngIf="detail.production_companies?.length" class="game-tabs-par">
+        Publishers:
+        <span *ngFor="let publisher of detail.production_companies; let last = last"
+          >{{ publisher.name }}<span *ngIf="!last">, </span></span
+        >
+      </p>
+      <p *ngIf="detail.homepage" class="game-tabs-par">
+        Website:
+        <a class="game-tabs-link" href="{{ detail.homepage }}" target="_blank">{{
+          detail.homepage
+        }}</a>
+      </p>
+      <div class="game-description" *ngIf="detail" >Overview: {{ detail.overview }}</div>
+    </mat-tab>
+    <mat-tab label="Screenshots" *ngIf="detail">
+      <img
+        class="game-screenshot"
+       src="https://image.tmdb.org/t/p/original/{{ detail.backdrop_path}}"
+        alt="screenshot"
+      />
+    </mat-tab>
+
+    <!-- TRAILER -->
+    <mat-tab label="Trailers" >
+      <video class="game-trailer" *ngIf="detail.video">
+        <source
+        src="https://www.youtube.com/watch?v=h6hZkvrFIj0{{ detail.video }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </mat-tab>
+
+   </mat-tab-group>
+</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<section class="navbar-top">
+  <nav class="navbar">
+    <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Nextre Cinema</a>
+    <input
+    name="search"
+    (keyup)="searchPopular($event)"
+    [(ngModel)]="query"
+    placeholder="500.000+ films">
+ <!--     <button (click)="searchFilm()">Search</button> -->
+    </div>
+  </nav>
+</section>
+
+
+<div class="films">
+<section *ngIf="popular" class="container">
+  <div class="row row-cols-1 row-cols-md-5 g-4 pt-4">
+    <div class="col" *ngFor="let pop of popular.results">
+    <div class="card">
+        <img
+          (click)="openDetail(pop)"
+          src="https://image.tmdb.org/t/p/original/{{ pop.poster_path }}"
+          class="card-img-top"
+        />
+      </div>
+
+      <!-- NON FUNZIONA CORRETTAMENTE
+
+    <div *ngIf="showLoadingIndicator" class="spinner">  </div> -->
+
+
+     <!--  <ng-template #content let-modal class="pop-up">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-basic-title">{{ pop.original_title }}</h2>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="dateOfBirth">{{ pop.overview }}</label>
+              <button type="button" class="btn btn-warning" (click)="openDetail(pop)">Scheda Film</button>
+            </div>
+          </form>
+        </div>
+      </ng-template> -->
+    </div>
+  </div>
+
+</section>
